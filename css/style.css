@@ -1,0 +1,74 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --clr: #222327;
+}
+
+body {
+  display: flex;
+  flex-direction: column; /* Alinhamento em coluna */
+  min-height: 100vh;
+  background: #fff; /* Fundo branco por padrão */
+}
+
+header {
+  background: var(--clr); /* Fundo preto */
+  color: white; /* Texto branco */
+  padding: 20px; /* Espaçamento interno */
+  text-align: right; /* Alinha o texto à direita */
+}
+
+.header-title {
+  font-size: 24px; /* Tamanho da fonte do título */
+  margin-bottom: 10px; /* Margem inferior */
+}
+
+.navigation {
+  width: 100%; /* Navegação ocupa toda a largura */
+  display: flex;
+  justify-content: flex-end; /* Alinha no canto direito */
+}
+
+.navigation ul {
+  display: flex;
+}
+
+.navigation ul li {
+  list-style: none;
+  margin: 0 15px; /* Espaçamento entre os itens */
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: white; /* Texto branco */
+  padding: 10px 15px; /* Espaçamento interno */
+  transition: background 0.3s; /* Transição de fundo */
+}
+
+.navigation ul li a:hover {
+  background: #E41B17; /* Cor de fundo ao passar o mouse */
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+main {
+  flex: 1; /* O main ocupará o espaço restante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff; /* Fundo branco */
+  padding: 20px; /* Espaçamento interno */
+}
+
+nav {
+    justify-content: center;
+    text-align: center;
+    font-size: small;
+    
+}

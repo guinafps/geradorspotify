@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <title>Registro</title>
+</head>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/login.css">
+  <title>Registro 8M</title>
+</head>
+
+<body>
+  <section>
+    <div class="form-box">
+      <div class="form-value">
+        <form action="">
+          <h2>Registro</h2>
+          <div class="inputbox">
+            <input type="mail" required>
+            <label for="">Email</label>
+          </div>
+          <div class="inputbox">
+            <input type="password" required>
+            <label for="">Password</label>
+          </div>
+          <div class="forget">
+            <label>
+              <p>Forget <a href="#">Password</a>
+            </label></p>
+
+          </div>
+          <button href="index.html">LOG IN</button>
+          <script>
+            
+          </script>
+          <div class="register">
+            <p>Nao tem uma conta <a href="register.html">Registre</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            const user = users.find(user => user.email === email && user.password === password);
+
+            if (user) {
+                alert('Login bem-sucedido!');
+            } else {
+                alert('Email ou senha incorretos.');
+            }
+        });
+    </script>
+</body>
+</html>
